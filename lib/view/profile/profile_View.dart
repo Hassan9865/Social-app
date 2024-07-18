@@ -59,7 +59,7 @@ class ProfileView extends StatelessWidget {
                         ListTile(
                           leading: Icon(Icons.person),
                           title: Text("Hassan"),
-                          subtitle: Text(""),
+                          // subtitle: Text(""),
                         ),
                         ListTile(
                           leading: Icon(Icons.email),
