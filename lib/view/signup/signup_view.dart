@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:social_app/components/button.dart';
 import 'package:social_app/components/textfeild.dart';
-import 'package:social_app/view/signup/signup_view_model.dart';
+import 'package:social_app/view/signup/signup_viewModel.dart';
 import 'package:stacked/stacked.dart';
 
 class SignUpView extends StatelessWidget {
@@ -9,9 +9,6 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController emailcontroller = TextEditingController();
-    TextEditingController passwordcontroller = TextEditingController();
-    TextEditingController namecontroller = TextEditingController();
     return ViewModelBuilder.reactive(
         viewModelBuilder: () => SignUpViewModel(),
         builder: (context, viewModel, child) {
@@ -28,42 +25,44 @@ class SignUpView extends StatelessWidget {
                       Icon(
                         Icons.camera_alt_outlined,
                         color: Colors.blueAccent,
-                        size: 100,
+                        size: MediaQuery.of(context).size.height / 8,
                       ),
-                      const SizedBox(
-                        height: 25,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 35,
                       ),
-                      const Text(
+                      Text(
                         "welcome to Socail app",
-                        style: TextStyle(fontSize: 22),
+                        style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.height / 30,
+                        ),
                       ),
-                      const SizedBox(
-                        height: 30,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 30,
                       ),
                       MyTextFeid(
-                          controller: namecontroller,
+                          controller: viewModel.namecontroller,
                           hintText: "Name",
                           obscureText: false),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 70,
                       ),
                       MyTextFeid(
-                          controller: emailcontroller,
+                          controller: viewModel.emailcontroller,
                           hintText: "Email",
                           obscureText: false),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 70,
                       ),
                       MyTextFeid(
-                          controller: passwordcontroller,
+                          controller: viewModel.passwordcontroller,
                           hintText: "password",
                           obscureText: true),
-                      const SizedBox(
-                        height: 25,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 35,
                       ),
                       MyButton(onTap: () {}, text: "SignUp"),
-                      const SizedBox(
-                        height: 25,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 50,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -79,6 +78,28 @@ class SignUpView extends StatelessWidget {
                             ),
                           )
                         ],
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 50,
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height / 25,
+                        width: MediaQuery.of(context).size.width / 2,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset("assets/images/google.png"),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text("SigIn in with Google"),
+                          ],
+                        ),
                       )
                     ],
                   ),
