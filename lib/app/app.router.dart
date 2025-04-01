@@ -12,7 +12,7 @@ import 'package:social_app/view/chat/chat_view.dart' as _i8;
 import 'package:social_app/view/home/home_view.dart' as _i5;
 import 'package:social_app/view/login/login_view.dart' as _i2;
 import 'package:social_app/view/notification/notificate_view.dart' as _i7;
-import 'package:social_app/view/profile/profile_View.dart' as _i6;
+import 'package:social_app/view/profile/profile_view.dart' as _i6;
 import 'package:social_app/view/signup/signup_view.dart' as _i3;
 import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i10;
