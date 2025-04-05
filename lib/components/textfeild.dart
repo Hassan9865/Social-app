@@ -4,11 +4,14 @@ class MyTextFeid extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
   final bool obscureText;
+  final Icon? prefixIcon;
+
   const MyTextFeid(
       {super.key,
       required this.controller,
       required this.hintText,
-      required this.obscureText});
+      required this.obscureText,
+      this.prefixIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +29,7 @@ class MyTextFeid extends StatelessWidget {
         fillColor: Colors.grey[200],
         filled: true,
         hintText: hintText,
+        prefixIcon: prefixIcon,
         hintStyle: TextStyle(color: Colors.grey),
       ),
     );
