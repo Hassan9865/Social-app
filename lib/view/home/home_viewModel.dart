@@ -10,4 +10,8 @@ class HomeViewModel extends BaseViewModel {
     navigationService.navigateTo(Routes.storyView,
         arguments: StoryViewArguments(imageUrl: imageUrl, name: name));
   }
+
+  void navigateToNotification() {
+    navigationService.navigateToNotificationView();
+  }
 }

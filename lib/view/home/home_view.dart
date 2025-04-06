@@ -29,18 +29,20 @@ class HomeView extends StatelessWidget {
             backgroundColor: Colors.blueGrey[700],
             elevation: 0,
             centerTitle: true,
-            // actions: [
-            //   IconButton(
-            //     onPressed: () {},
-            //     icon: Icon(Icons.search, color: Colors.white),
-            //     tooltip: 'Search',
-            //   ),
-            //   IconButton(
-            //     onPressed: () {},
-            //     icon: Icon(Icons.notifications_outlined, color: Colors.white),
-            //     tooltip: 'Notifications',
-            //   ),
-            // ],
+            actions: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.search, color: Colors.white),
+                tooltip: 'Search',
+              ),
+              IconButton(
+                onPressed: () {
+                  viewModel.navigateToNotification();
+                },
+                icon: Icon(Icons.notifications_outlined, color: Colors.white),
+                tooltip: 'Notifications',
+              ),
+            ],
           ),
           body: RefreshIndicator(
             onRefresh: () async {
