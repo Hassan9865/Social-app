@@ -50,7 +50,7 @@ class HomeView extends StatelessWidget {
               physics: AlwaysScrollableScrollPhysics(),
               child: Column(
                 children: [
-                  _buildStoriesSection(context),
+                  _buildStoriesSection(viewModel, context),
                   _buildPostsList(context, screenHeight),
                 ],
               ),
@@ -67,7 +67,7 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  Widget _buildStoriesSection(BuildContext context) {
+  Widget _buildStoriesSection(HomeViewModel viewModel, BuildContext context) {
     return Container(
       height: 120,
       child: ListView.builder(
@@ -78,8 +78,8 @@ class HomeView extends StatelessWidget {
           if (index == 0) {
             return _buildAddStoryButton();
           }
-          final storyIndex = index - 1;
-          return _buildStoryCircle(context, storyIndex);
+          // final storyIndex = index - 1;
+          return _buildStoryCircle(viewModel, context, index);
         },
       ),
     );
@@ -107,23 +107,30 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  Widget _buildStoryCircle(BuildContext context, int index) {
+  Widget _buildStoryCircle(
+      HomeViewModel viewModel, BuildContext context, int index) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         children: [
-          Container(
-            width: 70,
-            height: 70,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: Colors.blue, width: 2),
-            ),
-            child: Padding(
-              padding: EdgeInsets.all(2),
-              child: CircleAvatar(
-                radius: 30,
-                backgroundImage: AssetImage(circlelist[index].image),
+          GestureDetector(
+            onTap: () {
+              viewModel.navigateToStoryview(
+                  circlelist[index].image, circlelist[index].title);
+            },
+            child: Container(
+              width: 70,
+              height: 70,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.blue, width: 2),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(2),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundImage: AssetImage(circlelist[index].image),
+                ),
               ),
             ),
           ),
