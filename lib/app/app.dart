@@ -1,3 +1,4 @@
+import 'package:social_app/services/themeManager.dart';
 import 'package:social_app/view/bottom_bar/bottom_bar.dart';
 import 'package:social_app/view/chat/chat_view.dart';
 import 'package:social_app/view/home/home_view.dart';
@@ -32,5 +33,6 @@ import 'package:stacked_services/stacked_services.dart';
   MaterialRoute(page: StoryView),
 ], dependencies: [
   Singleton(classType: NavigationService),
+  LazySingleton(classType: ThemeManager),
 ])
 class app {}

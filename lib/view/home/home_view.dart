@@ -31,15 +31,20 @@ class HomeView extends StatelessWidget {
             centerTitle: true,
             actions: [
               IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.search, color: Colors.white),
-                tooltip: 'Search',
+                icon: Icon(
+                  viewModel.isDarkTheme ? Icons.dark_mode : Icons.light_mode,
+                  color: viewModel.isDarkTheme ? Colors.white : Colors.white,
+                ),
+                onPressed: viewModel.toggletheme,
               ),
               IconButton(
                 onPressed: () {
                   viewModel.navigateToNotification();
                 },
-                icon: Icon(Icons.notifications_outlined, color: Colors.white),
+                icon: Icon(
+                  Icons.notifications_outlined,
+                  color: viewModel.isDarkTheme ? Colors.white : Colors.white,
+                ),
                 tooltip: 'Notifications',
               ),
             ],
