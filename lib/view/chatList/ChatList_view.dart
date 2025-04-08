@@ -24,11 +24,6 @@ class ChatListView extends StatelessWidget {
               backgroundColor: Colors.blueGrey[300],
               elevation: 0,
             ),
-            //   actions: [
-            //     SwitchWidget(),
-            //   ],
-            // ),
-            // drawer: MyDrawer(),
             body: Column(
               children: [
                 Padding(

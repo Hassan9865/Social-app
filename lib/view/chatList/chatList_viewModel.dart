@@ -8,13 +8,4 @@ class ChatListViewModel extends BaseViewModel {
   navigateToChatView() {
     navigationService.navigateTo(Routes.chatView);
   }
-
-  bool _switchValue = false;
-
-  bool get switchValue => _switchValue;
-
-  void updateSwitchValue(bool newValue) {
-    _switchValue = newValue;
-    notifyListeners();
-  }
 }
