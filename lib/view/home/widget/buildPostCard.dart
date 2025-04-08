@@ -17,6 +17,7 @@ class Buildpostcard extends ViewModelWidget<HomeViewModel> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Card(
+      color: viewModel.isDarkTheme ? Colors.grey[850] : Colors.white,
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
       elevation: 2,
       shape: RoundedRectangleBorder(
@@ -41,6 +42,9 @@ class Buildpostcard extends ViewModelWidget<HomeViewModel> {
                       Text(
                         circlelist[index].title,
                         style: TextStyle(
+                          color: viewModel.isDarkTheme
+                              ? Colors.white
+                              : Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),
@@ -48,7 +52,9 @@ class Buildpostcard extends ViewModelWidget<HomeViewModel> {
                       Text(
                         "1 hour ago • Public",
                         style: TextStyle(
-                          color: Colors.grey,
+                          color: viewModel.isDarkTheme
+                              ? Colors.white
+                              : Colors.grey,
                           fontSize: 12,
                         ),
                       ),
@@ -57,14 +63,20 @@ class Buildpostcard extends ViewModelWidget<HomeViewModel> {
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.more_vert, color: Colors.grey),
+                  icon: Icon(
+                    Icons.more_vert,
+                    color: viewModel.isDarkTheme ? Colors.white : Colors.grey,
+                  ),
                 ),
               ],
             ),
             SizedBox(height: 12),
             Text(
               "The picture is amazing. This is a sample post content that can be longer than one line.",
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(
+                fontSize: 14,
+                color: viewModel.isDarkTheme ? Colors.white : Colors.black,
+              ),
             ),
             SizedBox(height: 12),
             Container(
@@ -82,13 +94,24 @@ class Buildpostcard extends ViewModelWidget<HomeViewModel> {
               children: [
                 Icon(Icons.favorite, color: Colors.red, size: 18),
                 SizedBox(width: 4),
-                Text("230", style: TextStyle(color: Colors.grey)),
+                Text("230",
+                    style: TextStyle(
+                      color: viewModel.isDarkTheme ? Colors.white : Colors.grey,
+                    )),
                 SizedBox(width: 15),
-                Icon(Icons.comment, color: Colors.grey, size: 18),
+                Icon(Icons.comment,
+                    color: viewModel.isDarkTheme ? Colors.white : Colors.grey,
+                    size: 18),
                 SizedBox(width: 4),
-                Text("56", style: TextStyle(color: Colors.grey)),
+                Text("56",
+                    style: TextStyle(
+                      color: viewModel.isDarkTheme ? Colors.white : Colors.grey,
+                    )),
                 Spacer(),
-                Text("1.2k shares", style: TextStyle(color: Colors.grey)),
+                Text("1.2k shares",
+                    style: TextStyle(
+                      color: viewModel.isDarkTheme ? Colors.white : Colors.grey,
+                    )),
               ],
             ),
             Divider(height: 20),

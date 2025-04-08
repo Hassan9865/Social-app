@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:social_app/view/home/home_viewModel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -17,8 +16,14 @@ class BuildPostActionButton extends ViewModelWidget<HomeViewModel> {
   Widget build(BuildContext context, HomeViewModel viewModel) {
     return TextButton.icon(
       onPressed: () {},
-      icon: Icon(icon, color: Colors.blueGrey),
-      label: Text(label, style: TextStyle(color: Colors.blueGrey)),
+      icon: Icon(
+        icon,
+        color: viewModel.isDarkTheme ? Colors.white : Colors.blueGrey,
+      ),
+      label: Text(label,
+          style: TextStyle(
+            color: viewModel.isDarkTheme ? Colors.white : Colors.blueGrey,
+          )),
       style: TextButton.styleFrom(
         minimumSize: Size(0, 40),
       ),

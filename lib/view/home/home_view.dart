@@ -15,7 +15,8 @@ class HomeView extends StatelessWidget {
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, viewModel, child) {
         return Scaffold(
-          backgroundColor: Colors.grey[50],
+          backgroundColor:
+              viewModel.isDarkTheme ? Colors.grey[900] : Colors.grey[50],
           appBar: AppBar(
             automaticallyImplyLeading: false,
             title: Text(
@@ -23,10 +24,11 @@ class HomeView extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 22,
-                color: Colors.white,
+                color: viewModel.isDarkTheme ? Colors.white : Colors.white,
               ),
             ),
-            backgroundColor: Colors.blueGrey[700],
+            backgroundColor:
+                viewModel.isDarkTheme ? Colors.black87 : Colors.blueGrey[700],
             elevation: 0,
             centerTitle: true,
             actions: [
