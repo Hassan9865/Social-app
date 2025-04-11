@@ -6,12 +6,16 @@ import 'package:social_app/view/login/login_view.dart';
 import 'package:social_app/view/notification/notificate_view.dart';
 import 'package:social_app/view/profile/profile_view.dart';
 import 'package:social_app/view/signup/signup_view.dart';
+import 'package:social_app/view/splash/spash_view.dart';
 import 'package:social_app/view/story/story_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 @StackedApp(routes: [
-  MaterialRoute(page: LoginView, initial: true),
+  MaterialRoute(page: SplashView, initial: true),
+  MaterialRoute(
+    page: LoginView,
+  ),
   MaterialRoute(
     page: SignUpView,
   ),
