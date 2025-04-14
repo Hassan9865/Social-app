@@ -46,7 +46,10 @@ class Buildstorycircle extends ViewModelWidget<HomeViewModel> {
             child: Text(
               circlelist[index].title,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12),
+              style: TextStyle(
+                fontSize: 12,
+                color: viewModel.isDarkTheme ? Colors.white : Colors.black,
+              ),
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
             ),

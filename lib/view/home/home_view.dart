@@ -69,8 +69,8 @@ class HomeView extends StatelessWidget {
                         if (index == 0) {
                           return Buildaddstorybutton(index);
                         }
-                        // final storyIndex = index - 1;
-                        return Buildstorycircle(index);
+                        final storyIndex = index - 1;
+                        return Buildstorycircle(storyIndex);
                       },
                     ),
                   ),

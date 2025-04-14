@@ -48,14 +48,20 @@ class ProfileView extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    _buildStatContainer(context, "1.2k", "Posts"),
-                    _buildStatContainer(context, "12.4k", "Followers"),
-                    _buildStatContainer(context, "563", "Following"),
-                  ],
-                ),
+                child: LayoutBuilder(builder: (context, constraints) {
+                  double containerWidth = constraints.maxWidth / 3 - 12;
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _buildStatContainer(
+                          context, "1.2k", "Posts", containerWidth),
+                      _buildStatContainer(
+                          context, "12.4k", "Followers", containerWidth),
+                      _buildStatContainer(
+                          context, "563", "Following", containerWidth),
+                    ],
+                  );
+                }),
               ),
               SizedBox(height: 20),
               Expanded(
@@ -145,9 +151,10 @@ class ProfileView extends StatelessWidget {
     );
   }
 
-  Widget _buildStatContainer(BuildContext context, String value, String label) {
+  Widget _buildStatContainer(
+      BuildContext context, String value, String label, double width) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.25,
+      width: width,
       padding: EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),

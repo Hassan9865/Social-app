@@ -14,6 +14,14 @@ class NotificationView extends StatelessWidget {
           return Scaffold(
             backgroundColor: Colors.grey[100],
             appBar: AppBar(
+              leading: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.white,
+                  )),
               automaticallyImplyLeading: false,
               title: Text(
                 "Notifications",
