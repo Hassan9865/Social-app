@@ -1,0 +1,2 @@
+D:/projects/Stacked projects/social_app/android/app/.cxx/Debug/3lv406t5/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/projects/Stacked projects/social_app/android/app/.cxx/Debug/3lv406t5/armeabi-v7a/CMakeFiles/rebuild_cache.dir
