@@ -18,7 +18,7 @@ This is a beautifully crafted **Social Media UI Kit** built using **Flutter** an
 
 ---
 
-## 🖼️ Screens Included
+## 🖼️ ScreenShots
 
 <img width="250" alt="Image" src="https://github.com/user-attachments/assets/d0cf07c3-80a7-4461-8416-e818a5518f4d" />
 
@@ -80,4 +80,5 @@ You are free to modify, use, and integrate it into your own projects.
 
 ## 👨‍💻 Author
 Developed by Syed Hassan Raza
+
 
