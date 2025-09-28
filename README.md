@@ -18,6 +18,18 @@ This is a beautifully crafted **Social Media UI Kit** built using **Flutter** an
 
 ---
 
+## 🖼️ Screens Included
+
+<img width="250" alt="Image" src="https://github.com/user-attachments/assets/d0cf07c3-80a7-4461-8416-e818a5518f4d" />
+
+<img width="250" alt="Image" src="https://github.com/user-attachments/assets/83c87081-118a-4201-8ec1-457c66b2cf46" />
+
+<img width="250" alt="Image" src="https://github.com/user-attachments/assets/d2037070-1407-49df-a385-35a4c7156da0" />
+
+<img width="250" alt="Image" src="https://github.com/user-attachments/assets/cfc641af-9161-48ac-add8-c03fb81a5887" />
+
+---
+
 ## 📐 Tech Stack
 
 - **Flutter (Dart)**  
@@ -40,7 +52,7 @@ bash
 Copy
 Edit
 flutter run
-📁 Folder Structure (Clean MVVM)
+## 📁 Folder Structure (Clean MVVM)
 pgsql
 Copy
 Edit
@@ -51,7 +63,9 @@ lib/
 ├── viewmodels/         # ViewModels (business logic)
 ├── widgets/            # Reusable widgets
 └── main.dart
-📌 Requirements
+
+## 📌 Requirements
+
 Flutter SDK 
 
 Dart 
@@ -60,9 +74,10 @@ Android Studio / VSCode
 
 Emulator or Physical Device
 
-🤝 License
+## 🤝 License
 This UI kit is for personal and commercial use.
 You are free to modify, use, and integrate it into your own projects.
 
-👨‍💻 Author
+## 👨‍💻 Author
 Developed by Syed Hassan Raza
+
